@@ -1,0 +1,45 @@
+=grid__hidden-xl ($to: 0)
+	@if($to == 0 or $to == max)
+		@media screen and (min-width: $xl + $margin * 2)
+			display: none
+	@else if($to == min)
+		@media screen and (max-width: $xl + $margin * 2)
+			display: none
+
+=grid__hidden-lg ($to: 0)
+	@if($to == 0)
+		@media screen and (min-width: $lg + $margin * 2) and (max-width: $xl + $margin * 2)
+			display: none
+	@else if($to == min)
+		@media screen and (max-width: $lg + $margin * 2)
+			display: none
+	@else if($to == max)
+		@media screen and (min-width: $lg + $margin * 2)
+			display: none
+
+=grid__hidden-md ($to: 0)
+	@if($to == 0)
+		@media screen and (min-width: $md + $margin * 2) and (max-width: $lg + $margin * 2)
+			display: none
+	@else if($to == min)
+		@media screen and (max-width: $md + $margin * 2)
+			display: none
+	@else if($to == max)
+		@media screen and (min-width: $md + $margin * 2)
+			display: none
+
+=grid__hidden-sm ($to: 0)
+	@if($to == 0)
+		@media screen and (min-width: $sm + $margin * 2) and (max-width: $md + $margin * 2)
+			display: none
+	@else if($to == min)
+		@media screen and (max-width: $sm + $margin * 2)
+			display: none
+	@else if($to == max)
+		@media screen and (min-width: $sm + $margin * 2)
+			display: none
+
+=grid__hidden-xs ($to: min)
+	@if($to == min)
+		@media screen and (max-width: $xs + $margin * 2)
+			display: none

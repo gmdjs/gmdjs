@@ -1,0 +1,110 @@
+=grid__col-xl ($val: 0, $gutter: yes)
+	@media screen and (min-width: $xl + $margin * 2)
+		max-width: $xl
+		box-sizing: border-box
+		flex: 0 0 auto
+		@if($gutter == yes)
+			margin:
+				left: $margin/2
+				right: $margin/2
+		@else if($gutter == no)
+			margin:
+				left: 0
+				right: 0
+
+		@if($val == 0 or $val == auto)
+			flex-basis: 0
+			flex-grow: 1
+			width: 100%
+		@else if($val)
+			max-width: calc(100% / #{$columns} * #{$val} - #{$margin})
+			flex-basis: calc(100% / #{$columns} * #{$val} - #{$margin})
+
+
+=grid__col-lg ($val: 0, $gutter: yes)
+	@media screen and (min-width: $lg + $margin * 2)
+		max-width: $xl
+		box-sizing: border-box
+		flex: 0 0 auto
+		@if($gutter == yes)
+			margin:
+				left: $margin/2
+				right: $margin/2
+		@else if($gutter == no)
+			margin:
+				left: 0
+				right: 0
+
+		@if($val == 0 or $val == auto)
+			flex-basis: 0
+			flex-grow: 1
+			width: 100%
+		@else if($val)
+			max-width: calc(100% / #{$columns} * #{$val} - #{$margin})
+			flex-basis: calc(100% / #{$columns} * #{$val} - #{$margin})
+
+=grid__col-md ($val: 0, $gutter: yes)
+	@media screen and (min-width: $md + $margin * 2)
+		max-width: $xl
+		box-sizing: border-box
+		flex: 0 0 auto
+		@if($gutter == yes)
+			margin:
+				left: $margin/2
+				right: $margin/2
+		@else if($gutter == no)
+			margin:
+				left: 0
+				right: 0
+
+		@if($val == 0 or $val == auto)
+			flex-basis: 0
+			flex-grow: 1
+			width: 100%
+		@else if($val)
+			max-width: calc(100% / #{$columns} * #{$val} - #{$margin})
+			flex-basis: calc(100% / #{$columns} * #{$val} - #{$margin})
+
+=grid__col-sm ($val: 0, $gutter: yes)
+	@media screen and (min-width: $sm + $margin * 2)
+		max-width: $xl
+		box-sizing: border-box
+		flex: 0 0 auto
+		@if($gutter == yes)
+			margin:
+				left: $margin/2
+				right: $margin/2
+		@else if($gutter == no)
+			margin:
+				left: 0
+				right: 0
+
+		@if($val == 0 or $val == auto)
+			flex-basis: 0
+			flex-grow: 1
+			width: 100%
+		@else if($val)
+			max-width: calc(100% / #{$columns} * #{$val} - #{$margin})
+			flex-basis: calc(100% / #{$columns} * #{$val} - #{$margin})
+
+=grid__col-xs ($val: 0, $gutter: yes)
+	@media screen and (max-width: $xs + $margin * 2)
+		max-width: $xl
+		box-sizing: border-box
+		flex: 0 0 auto
+		@if($gutter == yes)
+			margin:
+				left: $margin/2
+				right: $margin/2
+		@else if($gutter == no)
+			margin:
+				left: 0
+				right: 0
+
+		@if($val == 0 or $val == auto)
+			flex-basis: 0
+			flex-grow: 1
+			width: 100%
+		@else if($val)
+			max-width: calc(100% / #{$columns} * #{$val} - #{$margin})
+			flex-basis: calc(100% / #{$columns} * #{$val} - #{$margin})

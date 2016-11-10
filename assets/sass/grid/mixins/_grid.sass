@@ -1,0 +1,25 @@
+// Grids
+=grid ($flex-direction: row, $state: fixed, $columns-custom: $columns)
+	display: flex
+	flex-wrap: wrap
+	margin: 0 auto
+
+	@if($flex-direction == row && $flex-direction == column)
+		flex-direction: $flex-direction
+		margin:
+			left: auto
+			right: auto
+
+	@if($state == fixed)
+		@media screen and (min-width: $xl + $margin * 2)
+			max-width: $xl
+		@media screen and (min-width: $lg + $margin * 2)
+			max-width: $lg
+		@media screen and (min-width: $md + $margin * 2)
+			max-width: $md
+		@media screen and (min-width: $sm + $margin * 2)
+			max-width: $sm
+
+	@if($state == fluid)
+		@media screen and (min-width: $xl + $margin)
+			max-width: $xl + $margin * 2

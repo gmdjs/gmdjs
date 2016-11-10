@@ -1,0 +1,65 @@
+=justify-content-xl ($justify-content)
+	@media screen and (min-width: $xl + $margin * 2)
+		@if($justify-content == start or $justify-content == flex-start)
+			justify-content: flex-start
+		@else if($justify-content == end or $justify-content == flex-end)
+			justify-content: flex-end
+		@else if($justify-content == between or $justify-content == space-between)
+			justify-content: space-between
+		@else if($justify-content == around or $justify-content == space-around)
+			justify-content: space-around
+		@else if($justify-content == center)
+			justify-content: center
+
+=justify-content-lg ($justify-content)
+	@media screen and (min-width: $lg + $margin * 2) and (max-width: $xl + $margin * 2)
+		@if($justify-content == start or $justify-content == flex-start)
+			justify-content: flex-start
+		@else if($justify-content == end or $justify-content == flex-end)
+			justify-content: flex-end
+		@else if($justify-content == between or $justify-content == space-between)
+			justify-content: space-between
+		@else if($justify-content == around or $justify-content == space-around)
+			justify-content: space-around
+		@else if($justify-content == center)
+			justify-content: center
+
+=justify-content-md ($justify-content)
+	@media screen and (min-width: $md + $margin * 2) and (max-width: $lg + $margin * 2)
+		@if($justify-content == start or $justify-content == flex-start)
+			justify-content: flex-start
+		@else if($justify-content == end or $justify-content == flex-end)
+			justify-content: flex-end
+		@else if($justify-content == between or $justify-content == space-between)
+			justify-content: space-between
+		@else if($justify-content == around or $justify-content == space-around)
+			justify-content: space-around
+		@else if($justify-content == center)
+			justify-content: center
+
+=justify-content-sm ($justify-content)
+	@media screen and (min-width: $sm + $margin * 2) and (max-width: $md + $margin * 2)
+		@if($justify-content == start or $justify-content == flex-start)
+			justify-content: flex-start
+		@else if($justify-content == end or $justify-content == flex-end)
+			justify-content: flex-end
+		@else if($justify-content == between or $justify-content == space-between)
+			justify-content: space-between
+		@else if($justify-content == around or $justify-content == space-around)
+			justify-content: space-around
+		@else if($justify-content == center)
+			justify-content: center
+
+=justify-content-xs ($justify-content)
+	@media screen and (max-width: $xs + $margin * 2)
+		@if($justify-content == start or $justify-content == flex-start)
+			justify-content: flex-start
+		@else if($justify-content == end or $justify-content == flex-end)
+			justify-content: flex-end
+		@else if($justify-content == between or $justify-content == space-between)
+			justify-content: space-between
+		@else if($justify-content == around or $justify-content == space-around)
+			justify-content: space-around
+		@else if($justify-content == center)
+			justify-content: center
+
