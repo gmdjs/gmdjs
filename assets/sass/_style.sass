@@ -1,5 +1,6 @@
 .grid
 	+grid (row, fixed)
+	+align-xl (center)
 	&__col
 		+grid__col-xl ()
 		+grid__col-md ()
@@ -13,7 +14,7 @@
 		+grid__col-xl (3)
 	.col-4
 		+grid__col-xl (4)
-		+grid__hidden-md()
+		+grid__hidden-md ()
 	.offset
 		+grid__offset-xl (2, right)
 	.offset-1
@@ -21,11 +22,3 @@
 		+grid__offset-lg (1, right)
 		+grid__offset-md (1, right)
 		+grid__offset-sm (1, right)
-
-.goods
-	+grid(row, fexed)
-
-	&__item
-		+grid__col-xl(3)
-		+grid__col-md(6)
-		+grid__col-xs(12)

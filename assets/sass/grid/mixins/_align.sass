@@ -1,0 +1,120 @@
+=align-xl ($justify-content: start, $align-items: stretch)
+	@media screen and (min-width: $xl + $margin * 2)
+		@if($justify-content == start)
+			justify-content: flex-start
+		@else if($justify-content == end)
+			justify-content: flex-end
+		@else if($justify-content == between)
+			justify-content: space-between
+		@else if($justify-content == around)
+			justify-content: space-around
+		@else if($justify-content == center)
+			justify-content: center
+
+		@if($align-items == start)
+			align-items: flex-start
+		@else if($align-items == end)
+			align-items: flex-end
+		@else if($align-items == stretch)
+			align-items: stretch
+		@else if($align-items == baseline)
+			align-items: baseline
+		@else if($align-items == center)
+			align-items: center
+
+
+=align-lg ($justify-content: start, $align-items: stretch)
+	@media screen and (min-width: $lg + $margin * 2) and (max-width: $xl + $margin * 2)
+		@if($justify-content == start)
+			justify-content: flex-start
+		@else if($justify-content == end)
+			justify-content: flex-end
+		@else if($justify-content == between)
+			justify-content: space-between
+		@else if($justify-content == around)
+			justify-content: space-around
+		@else if($justify-content == center)
+			justify-content: center
+
+		@if($align-items == start)
+			align-items: flex-start
+		@else if($align-items == end)
+			align-items: flex-end
+		@else if($align-items == stretch)
+			align-items: stretch
+		@else if($align-items == baseline)
+			align-items: baseline
+		@else if($align-items == center)
+			align-items: center
+
+=align-md ($justify-content: start, $align-items: stretch)
+	@media screen and (min-width: $md + $margin * 2) and (max-width: $lg + $margin * 2)
+		@if($justify-content == start)
+			justify-content: flex-start
+		@else if($justify-content == end)
+			justify-content: flex-end
+		@else if($justify-content == between)
+			justify-content: space-between
+		@else if($justify-content == around)
+			justify-content: space-around
+		@else if($justify-content == center)
+			justify-content: center
+
+		@if($align-items == start)
+			align-items: flex-start
+		@else if($align-items == end)
+			align-items: flex-end
+		@else if($align-items == stretch)
+			align-items: stretch
+		@else if($align-items == baseline)
+			align-items: baseline
+		@else if($align-items == center)
+			align-items: center
+
+=align-sm ($justify-content: start, $align-items: stretch)
+	@media screen and (min-width: $sm + $margin * 2) and (max-width: $md + $margin * 2)
+		@if($justify-content == start)
+			justify-content: flex-start
+		@else if($justify-content == end)
+			justify-content: flex-end
+		@else if($justify-content == between)
+			justify-content: space-between
+		@else if($justify-content == around)
+			justify-content: space-around
+		@else if($justify-content == center)
+			justify-content: center
+
+		@if($align-items == start)
+			align-items: flex-start
+		@else if($align-items == end)
+			align-items: flex-end
+		@else if($align-items == stretch)
+			align-items: stretch
+		@else if($align-items == baseline)
+			align-items: baseline
+		@else if($align-items == center)
+			align-items: center
+
+=align-xs ($justify-content: start, $align-items: stretch)
+	@media screen and (max-width: $xs + $margin * 2)
+		@if($justify-content == start)
+			justify-content: flex-start
+		@else if($justify-content == end)
+			justify-content: flex-end
+		@else if($justify-content == between)
+			justify-content: space-between
+		@else if($justify-content == around)
+			justify-content: space-around
+		@else if($justify-content == center)
+			justify-content: center
+
+		@if($align-items == start)
+			align-items: flex-start
+		@else if($align-items == end)
+			align-items: flex-end
+		@else if($align-items == stretch)
+			align-items: stretch
+		@else if($align-items == baseline)
+			align-items: baseline
+		@else if($align-items == center)
+			align-items: center

@@ -1,53 +1,90 @@
 =grid__offset-xl ($val: 0, $to: null)
 	@media screen and (min-width: $xl + $margin * 2)
-		@if($to == right)
+		@if($val == auto)
+			@if($to == right)
+				@if($val)
+					margin-left: auto
+
+			@if($to == left)
+				@if($val)
+					margin-right: auto
+		@else if($to == right)
 			@if($val)
 				margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
 
-		@if($to == left)
-			@if($val)
-				margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
+			@if($to == left)
+				@if($val)
+					margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
 
 
 =grid__offset-lg ($val: 0, $to: null)
 	@media screen and (min-width: $lg + $margin * 2)
-		@if($to == right)
+		@if($val == auto)
+			@if($to == right)
+				@if($val)
+					margin-left: auto
+
+			@if($to == left)
+				@if($val)
+					margin-right: auto
+		@else if($to == right)
 			@if($val)
 				margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
 
-		@if($to == left)
-			@if($val)
-				margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
-
+			@if($to == left)
+				@if($val)
+					margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
 
 =grid__offset-md ($val: 0, $to: null)
 	@media screen and (min-width: $md + $margin * 2)
-		@if($to == right)
+		@if($val == auto)
+			@if($to == right)
+				@if($val)
+					margin-left: auto
+
+			@if($to == left)
+				@if($val)
+					margin-right: auto
+		@else if($to == right)
 			@if($val)
 				margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
 
-		@if($to == left)
-			@if($val)
-				margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
-
+			@if($to == left)
+				@if($val)
+					margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
 
 =grid__offset-sm ($val: 0, $to: null)
 	@media screen and (min-width: $sm + $margin * 2)
-		@if($to == right)
+		@if($val == auto)
+			@if($to == right)
+				@if($val)
+					margin-left: auto
+
+			@if($to == left)
+				@if($val)
+					margin-right: auto
+		@else if($to == right)
 			@if($val)
 				margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
 
-		@if($to == left)
-			@if($val)
-				margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
-
+			@if($to == left)
+				@if($val)
+					margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
 
 =grid__offset-xs ($val: 0, $to: null)
 	@media screen and (max-width: $xs + $margin * 2)
-		@if($to == right)
+		@if($val == auto)
+			@if($to == right)
+				@if($val)
+					margin-left: auto
+
+			@if($to == left)
+				@if($val)
+					margin-right: auto
+		@else if($to == right)
 			@if($val)
 				margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
 
-		@if($to == left)
-			@if($val)
-				margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
+			@if($to == left)
+				@if($val)
+					margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
