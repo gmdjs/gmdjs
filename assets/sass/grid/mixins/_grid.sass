@@ -10,13 +10,13 @@
 		flex-direction: $flex-direction
 
 	@if($state == fixed)
-		@media screen and (min-width: $xl + $margin * 2)
+		+media-xl()
 			max-width: $xl
-		@media screen and (min-width: $lg + $margin * 2)
+		+media-lg()
 			max-width: $lg
-		@media screen and (min-width: $md + $margin * 2)
+		+media-md()
 			max-width: $md
-		@media screen and (min-width: $sm + $margin * 2)
+		+media-sm()
 			max-width: $sm
 
 	@else if($state == fluid)

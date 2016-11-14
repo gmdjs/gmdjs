@@ -1,6 +1,5 @@
 =grid__col-xl ($val: 0, $gutter: yes)
-	@media screen and (min-width: $xl + $margin * 2)
-		max-width: $xl
+	+media-xl()
 		box-sizing: border-box
 		flex: 0 0 auto
 		@if($gutter == yes)
@@ -22,8 +21,7 @@
 
 
 =grid__col-lg ($val: 0, $gutter: yes)
-	@media screen and (min-width: $lg + $margin * 2)
-		max-width: $xl
+	+media-lg()
 		box-sizing: border-box
 		flex: 0 0 auto
 		@if($gutter == yes)
@@ -44,8 +42,7 @@
 			flex-basis: calc(100% / #{$columns} * #{$val} - #{$margin})
 
 =grid__col-md ($val: 0, $gutter: yes)
-	@media screen and (min-width: $md + $margin * 2)
-		max-width: $xl
+	+media-md()
 		box-sizing: border-box
 		flex: 0 0 auto
 		@if($gutter == yes)
@@ -66,8 +63,7 @@
 			flex-basis: calc(100% / #{$columns} * #{$val} - #{$margin})
 
 =grid__col-sm ($val: 0, $gutter: yes)
-	@media screen and (min-width: $sm + $margin * 2)
-		max-width: $xl
+	+media-sm()
 		box-sizing: border-box
 		flex: 0 0 auto
 		@if($gutter == yes)
@@ -88,8 +84,7 @@
 			flex-basis: calc(100% / #{$columns} * #{$val} - #{$margin})
 
 =grid__col-xs ($val: 0, $gutter: yes)
-	@media screen and (max-width: $xs + $margin * 2)
-		max-width: $xl
+	+media-xs(max)
 		box-sizing: border-box
 		flex: 0 0 auto
 		@if($gutter == yes)

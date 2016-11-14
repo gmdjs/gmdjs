@@ -1,5 +1,5 @@
-=align-xl ($justify-content: start, $align-items: stretch)
-	@media screen and (min-width: $xl + $margin * 2)
+=align-xl ($justify-content: start, $align-items: stretch, $direction: min)
+	@media screen and (#{$direction}-width: $xl + $margin * 2)
 		@if($justify-content == start)
 			justify-content: flex-start
 		@else if($justify-content == end)
@@ -23,8 +23,8 @@
 			align-items: center
 
 
-=align-lg ($justify-content: start, $align-items: stretch)
-	@media screen and (min-width: $lg + $margin * 2) and (max-width: $xl + $margin * 2)
+=align-lg ($justify-content: start, $align-items: stretch, $direction: min)
+	@media screen and (#{$direction}-width: $lg + $margin * 2)
 		@if($justify-content == start)
 			justify-content: flex-start
 		@else if($justify-content == end)
@@ -47,8 +47,8 @@
 		@else if($align-items == center)
 			align-items: center
 
-=align-md ($justify-content: start, $align-items: stretch)
-	@media screen and (min-width: $md + $margin * 2) and (max-width: $lg + $margin * 2)
+=align-md ($justify-content: start, $align-items: stretch, $direction: min)
+	@media screen and (#{$direction}-width: $md + $margin * 2)
 		@if($justify-content == start)
 			justify-content: flex-start
 		@else if($justify-content == end)
@@ -71,8 +71,8 @@
 		@else if($align-items == center)
 			align-items: center
 
-=align-sm ($justify-content: start, $align-items: stretch)
-	@media screen and (min-width: $sm + $margin * 2) and (max-width: $md + $margin * 2)
+=align-sm ($justify-content: start, $align-items: stretch, $direction: min)
+	@media screen and (#{$direction}-width: $sm + $margin * 2)
 		@if($justify-content == start)
 			justify-content: flex-start
 		@else if($justify-content == end)
@@ -95,8 +95,8 @@
 		@else if($align-items == center)
 			align-items: center
 
-=align-xs ($justify-content: start, $align-items: stretch)
-	@media screen and (max-width: $xs + $margin * 2)
+=align-xs ($justify-content: start, $align-items: stretch, $direction: max)
+	@media screen and (#{$direction}-width: $xs + $margin * 2)
 		@if($justify-content == start)
 			justify-content: flex-start
 		@else if($justify-content == end)
