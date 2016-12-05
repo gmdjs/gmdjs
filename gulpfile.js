@@ -17,7 +17,7 @@ gulp.task('browserSync', function () {
 });
 
 gulp.task('postcss', function () {
-	let processor = ([
+	const processor = ([
 			//autoprefixer({browsers: ['last 10 version']}),
 			cssnano()
 	]);

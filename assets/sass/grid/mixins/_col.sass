@@ -1,0 +1,166 @@
+=col($val: 0, $gutter: yes)
+	box-sizing: border-box
+	flex: 0 0 auto
+	@if ($gutter == yes)
+		margin:
+			left: $margin/2
+			right: $margin/2
+		@if ($val == 0 or $val == auto)
+			flex-basis: 0
+			flex-grow: 1
+			width: 100%
+		@else if ($val)
+			max-width: calc(100% / #{$columns} * #{$val} - #{$margin})
+			flex-basis: calc(100% / #{$columns} * #{$val} - #{$margin})
+
+	@else if ($gutter == no)
+		margin:
+			left: 0
+			right: 0
+		@if ($val == 0 or $val == auto)
+			flex-basis: 0
+			flex-grow: 1
+			width: 100%
+		@else if ($val)
+			max-width: calc(100% / #{$columns} * #{$val})
+			flex-basis: calc(100% / #{$columns} * #{$val})
+
+=col-xl($val: 0, $gutter: yes)
+	+media-xl()
+		box-sizing: border-box
+		flex: 0 0 auto
+		@if ($gutter == yes)
+			margin:
+				left: $margin/2
+				right: $margin/2
+			@if ($val == 0 or $val == auto)
+				flex-basis: 0
+				flex-grow: 1
+				width: 100%
+			@else if ($val)
+				max-width: calc(100% / #{$columns} * #{$val} - #{$margin})
+				flex-basis: calc(100% / #{$columns} * #{$val} - #{$margin})
+
+		@else if ($gutter == no)
+			margin:
+				left: 0
+				right: 0
+			@if ($val == 0 or $val == auto)
+				flex-basis: 0
+				flex-grow: 1
+				width: 100%
+			@else if ($val)
+				max-width: calc(100% / #{$columns} * #{$val})
+				flex-basis: calc(100% / #{$columns} * #{$val})
+
+=col-lg($val: 0, $gutter: yes)
+	+media-lg()
+		box-sizing: border-box
+		flex: 0 0 auto
+		@if ($gutter == yes)
+			margin:
+				left: $margin/2
+				right: $margin/2
+			@if ($val == 0 or $val == auto)
+				flex-basis: 0
+				flex-grow: 1
+				width: 100%
+			@else if ($val)
+				max-width: calc(100% / #{$columns} * #{$val} - #{$margin})
+				flex-basis: calc(100% / #{$columns} * #{$val} - #{$margin})
+
+		@else if ($gutter == no)
+			margin:
+				left: 0
+				right: 0
+			@if ($val == 0 or $val == auto)
+				flex-basis: 0
+				flex-grow: 1
+				width: 100%
+			@else if ($val)
+				max-width: calc(100% / #{$columns} * #{$val})
+				flex-basis: calc(100% / #{$columns} * #{$val})
+
+=col-md($val: 0, $gutter: yes)
+	+media-md()
+		box-sizing: border-box
+		flex: 0 0 auto
+		@if ($gutter == yes)
+			margin:
+				left: $margin/2
+				right: $margin/2
+			@if ($val == 0 or $val == auto)
+				flex-basis: 0
+				flex-grow: 1
+				width: 100%
+			@else if ($val)
+				max-width: calc(100% / #{$columns} * #{$val} - #{$margin})
+				flex-basis: calc(100% / #{$columns} * #{$val} - #{$margin})
+
+		@else if ($gutter == no)
+			margin:
+				left: 0
+				right: 0
+			@if ($val == 0 or $val == auto)
+				flex-basis: 0
+				flex-grow: 1
+				width: 100%
+			@else if ($val)
+				max-width: calc(100% / #{$columns} * #{$val})
+				flex-basis: calc(100% / #{$columns} * #{$val})
+
+=col-sm($val: 0, $gutter: yes)
+	+media-sm()
+		box-sizing: border-box
+		flex: 0 0 auto
+		@if ($gutter == yes)
+			margin:
+				left: $margin/2
+				right: $margin/2
+			@if ($val == 0 or $val == auto)
+				flex-basis: 0
+				flex-grow: 1
+				width: 100%
+			@else if ($val)
+				max-width: calc(100% / #{$columns} * #{$val} - #{$margin})
+				flex-basis: calc(100% / #{$columns} * #{$val} - #{$margin})
+
+		@else if ($gutter == no)
+			margin:
+				left: 0
+				right: 0
+			@if ($val == 0 or $val == auto)
+				flex-basis: 0
+				flex-grow: 1
+				width: 100%
+			@else if ($val)
+				max-width: calc(100% / #{$columns} * #{$val})
+				flex-basis: calc(100% / #{$columns} * #{$val})
+
+=col-xs($val: 0, $gutter: yes)
+	+media-xs(max)
+		box-sizing: border-box
+		flex: 0 0 auto
+		@if ($gutter == yes)
+			margin:
+				left: $margin/2
+				right: $margin/2
+			@if ($val == 0 or $val == auto)
+				flex-basis: 0
+				flex-grow: 1
+				width: 100%
+			@else if ($val)
+				max-width: calc(100% / #{$columns} * #{$val} - #{$margin})
+				flex-basis: calc(100% / #{$columns} * #{$val} - #{$margin})
+
+		@else if ($gutter == no)
+			margin:
+				left: 0
+				right: 0
+			@if ($val == 0 or $val == auto)
+				flex-basis: 0
+				flex-grow: 1
+				width: 100%
+			@else if ($val)
+				max-width: calc(100% / #{$columns} * #{$val})
+				flex-basis: calc(100% / #{$columns} * #{$val})

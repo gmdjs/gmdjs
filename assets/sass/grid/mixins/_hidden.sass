@@ -1,45 +1,51 @@
-=grid__hidden-xl ($direction: 0)
-	@if($direction == 0 or $direction == up)
+=hidden($direction: 0)
+	@if ($direction == 0 or $direction == up)
+		display: none
+	@else if ($direction == down)
+		display: none
+
+=hidden-xl($direction: 0)
+	@if ($direction == 0 or $direction == up)
 		@media screen and (min-width: $xl + $margin * 2)
 			display: none
-	@else if($direction == down)
+	@else if ($direction == down)
 		+media-xl(max)
 			display: none
 
-=grid__hidden-lg ($direction: 0)
-	@if($direction == 0)
+=hidden-lg($direction: 0)
+	@if ($direction == 0)
 		@media screen and (min-width: $lg + $margin * 2) and (max-width: $xl + $margin * 2)
 			display: none
-	@else if($direction == down)
+	@else if ($direction == down)
 		+media-lg(max)
 			display: none
-	@else if($direction == up)
+	@else if ($direction == up)
 		+media-lg()
 			display: none
 
-=grid__hidden-md ($direction: 0)
-	@if($direction == 0)
+=hidden-md($direction: 0)
+	@if ($direction == 0)
 		@media screen and (min-width: $md + $margin * 2) and (max-width: $lg + $margin * 2)
 			display: none
-	@else if($direction == down)
+	@else if ($direction == down)
 		+media-md(max)
 			display: none
-	@else if($direction == up)
+	@else if ($direction == up)
 		+media-md()
 			display: none
 
-=grid__hidden-sm ($direction: 0)
-	@if($direction == 0)
+=hidden-sm($direction: 0)
+	@if ($direction == 0)
 		@media screen and (min-width: $sm + $margin * 2) and (max-width: $md + $margin * 2)
 			display: none
-	@else if($direction == down)
+	@else if ($direction == down)
 		+media-sm(max)
 			display: none
-	@else if($direction == up)
+	@else if ($direction == up)
 		+media-sm()
 			display: none
 
-=grid__hidden-xs ($direction: min)
-	@if($direction == down)
+=hidden-xs($direction: min)
+	@if ($direction == down)
 		+media-xs(max)
 			display: none

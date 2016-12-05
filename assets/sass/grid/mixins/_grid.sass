@@ -1,15 +1,15 @@
 // Grids
-=grid ($flex-direction: row, $state: fixed, $columns-custom: $columns)
+=grid($flex-direction: row, $state: fixed)
 	display: flex
 	flex-wrap: wrap
 	margin:
 		left: auto
 		right: auto
 
-	@if($flex-direction == row && $flex-direction == column)
+	@if ($flex-direction == row & & $flex-direction == column)
 		flex-direction: $flex-direction
 
-	@if($state == fixed)
+	@if ($state == fixed)
 		+media-xl()
 			max-width: $xl
 		+media-lg()
@@ -19,5 +19,5 @@
 		+media-sm()
 			max-width: $sm
 
-	@else if($state == fluid)
+	@else if ($state == fluid)
 		max-width: 100%
