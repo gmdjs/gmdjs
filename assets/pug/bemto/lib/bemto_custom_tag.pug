@@ -1,0 +1,51 @@
+//- bemto
+//- Copyright(c) 2012 Roman Komarov <kizu@kizu.ru>
+//- MIT Licensed
+
+//- This is a replacement for an interpolated tag,
+//- which is not possible due to Jade's wontfixed #659 and #660 bugs.
+
+mixin bemto_custom_inline_tag(customTag, self_closing)
+  - self_closing = self_closing || false
+  != '<'
+  = customTag
+  if attributes
+    - for (var attribute in attributes)
+      if attributes.hasOwnProperty(attribute) && attributes[attribute] !== false && attributes[attribute] !== undefined
+        = ' '
+        = attribute
+        != '="'
+        != attributes[attribute] === true ? attribute : attributes[attribute]
+        != '"'
+  if self_closing
+    != '/>'
+  else
+    != '>'
+    block
+    != '</'
+    = customTag
+    != '>'
+
+
+mixin bemto_custom_tag(customTag, tagMetadata)
+  - customTag = customTag || 'div'
+  - tagMetadata = tagMetadata || {}
+  - var selfClosing = false
+  if customTag.substr(-1) === '/'
+    - selfClosing = true
+    - customTag = customTag.slice(0, -1)
+
+  - var tag_type = tagMetadata.type || get_bemto_tag_type(customTag)
+
+  case tag_type
+    when 'inline'
+      +bemto_custom_inline_tag(customTag)&attributes(attributes): block
+    when 'self_closing'
+      +bemto_custom_inline_tag(customTag, true)&attributes(attributes)
+
+    //- Block-level tags
+    default
+      if selfClosing
+        #{customTag}&attributes(attributes)()/
+      else
+        #{customTag}&attributes(attributes): block

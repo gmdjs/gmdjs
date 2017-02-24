@@ -1,0 +1,43 @@
+include ../../bemto
+
++b.block_modifier
+  | Hey
+
++b.block__element
+  | Hey
+
+-
+  set_bemto_settings({
+    element: '-',
+    modifier: '--'
+  })
+
++b.block--modifier
+  | Hey
+
++b.block-element
+  | Hey
+
++b.block-element
+  +e.element2
+    | Hey
+
++b.block
+  +b.-element
+    +e.element2
+      | Hey
+
+
+-
+  set_bemto_settings({
+    flat_elements: false
+  })
+
++b.block-element
+  +e.element2
+    | Hey
+
++b.block
+  +b.-element
+    +e.element2
+      | Hey

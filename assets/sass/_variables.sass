@@ -1,0 +1,21 @@
+// Breakpoints
+$setup: bootstrap !default
+
+@if $setup == mdl
+  $xl: 1600px
+  $lg: 1280px
+  $md: 960px
+  $sm: 600px
+  $xs: 480px
+@else if $setup == md
+  $xl: 1440px
+  $lg: 1280px
+  $md: 840px
+  $sm: 600px
+  $xs: 480px
+@else if $setup == bootstrap
+  $xl: 1200px
+  $lg: 992px
+  $md: 768px
+  $sm: 576px
+  $xs: $sm - 1px

@@ -1,0 +1,49 @@
+.container
+  +grid()
+  +align-lg(end)
+  background-color: #B4B4B4
+  &__auto
+    +col(2)
+    +col-md(2)
+
+
+  &__col
+    +col()
+    +col-xl(2)
+    +col-lg(2)
+    +col-xs(2)
+  &__col-2
+    +col()
+    +col-md(7)
+    +col-xs(12)
+  &__col-3
+    +col()
+    +col-md(3)
+    +col-xs(12)
+  &__col-4
+
+  &__offset-left
+    +offset-md(left, 5)
+  &__offset-auto
+  &__offset-right
+    // +offset-md(right, 4)
+
+.container-2
+  background-color: #B4B4B4
+  +container()
+  &__item-xl
+    +media-xl
+      background-color: rgb(142, 133, 122)
+  &__item-lg
+    +hidden-lg(down)
+    +media-lg
+      background-color: rgb(222, 76, 34)
+  &__item-md
+    +media-md
+      background-color: rgb(138, 6, 143)
+  &__item-sm
+    +media-sm
+      background-color: rgb(37, 101, 107)
+  &__item-xs
+    +media-xs
+      background-color: rgb(119, 247, 74)

@@ -1,51 +1,51 @@
-=hidden($direction: 0)
-	@if ($direction == 0 or $direction == up)
-		display: none
-	@else if ($direction == down)
-		display: none
+=hidden($direction: only)
+  @if $direction == only or $direction == up
+    display: none
+  @else if $direction == down
+    display: none
 
-=hidden-xl($direction: 0)
-	@if ($direction == 0 or $direction == up)
-		@media screen and (min-width: $xl + $margin * 2)
-			display: none
-	@else if ($direction == down)
-		+media-xl(max)
-			display: none
+=hidden-xl($direction: only)
+  @if $direction == only or $direction == up
+    +media-xl(up)
+      display: none
+  @else if $direction == down
+    +media-xl(down)
+      display: none
 
-=hidden-lg($direction: 0)
-	@if ($direction == 0)
-		@media screen and (min-width: $lg + $margin * 2) and (max-width: $xl + $margin * 2)
-			display: none
-	@else if ($direction == down)
-		+media-lg(max)
-			display: none
-	@else if ($direction == up)
-		+media-lg()
-			display: none
+=hidden-lg($direction: only)
+  @if $direction == only
+    @media screen and (min-width: $lg) and (max-width: $xl)
+      display: none
+  @else if $direction == down
+    +media-lg(down)
+      display: none
+  @else if $direction == up
+    +media-lg(up)
+      display: none
 
-=hidden-md($direction: 0)
-	@if ($direction == 0)
-		@media screen and (min-width: $md + $margin * 2) and (max-width: $lg + $margin * 2)
-			display: none
-	@else if ($direction == down)
-		+media-md(max)
-			display: none
-	@else if ($direction == up)
-		+media-md()
-			display: none
+=hidden-md($direction: only)
+  @if $direction == only
+    @media screen and (min-width: $md) and (max-width: $lg)
+      display: none
+  @else if $direction == down
+    +media-md(down)
+      display: none
+  @else if $direction == up
+    +media-md(up)
+      display: none
 
-=hidden-sm($direction: 0)
-	@if ($direction == 0)
-		@media screen and (min-width: $sm + $margin * 2) and (max-width: $md + $margin * 2)
-			display: none
-	@else if ($direction == down)
-		+media-sm(max)
-			display: none
-	@else if ($direction == up)
-		+media-sm()
-			display: none
+=hidden-sm($direction: only)
+  @if $direction == only
+    @media screen and (min-width: $sm) and (max-width: $md)
+      display: none
+  @else if $direction == down
+    +media-sm(down)
+      display: none
+  @else if $direction == up
+    +media-sm(up)
+      display: none
 
-=hidden-xs($direction: min)
-	@if ($direction == down)
-		+media-xs(max)
-			display: none
+=hidden-xs($direction: down)
+  @if $direction == down
+    +media-xs(down)
+      display: none

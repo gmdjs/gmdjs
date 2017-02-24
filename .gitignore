@@ -1,3 +1,4 @@
 # Created by .ignore support plugin
 .idea
+.vscode
 /node_modules

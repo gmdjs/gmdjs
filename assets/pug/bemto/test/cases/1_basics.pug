@@ -1,0 +1,62 @@
+include ../../bemto
+
++b.foo bar
+
++b.foo
+  +e.bar baz
+
++b.foo.bar__
+  +e.baz
+
++b.foo__.bar__
+  +e.baz_mod
+
++b.block_foo bar
+
++b.H1.title header
+
++b.INPUT.input(required)
+
++b.MAIN.content CONTENT
+
++b.TEXTAREA
+  | Oh hello
+
++b.PRE
+  | Oh hello
+
++b.block_foo._bar._baz
+  +e.element_type_lol._mode_moddy Blah
+
+// Tag as first uppercase class
+p
+  +b.SPAN.foo bar
+
+// Tag as option
+p
+  +b({tag: 'span'}).foo baz
+
+// Backwards compatible way
+p
+  +b('span').foo
+    +e('span').bar raz
+
+// Self-closing tag as option
+p
+  +b({tag: 'closey/'}).foo baz
+
+// Empty block and empty element
++b
+  +e foo
+  +e.bar_mod foo
+
++b.FOO
+  +e.BAR foo
+
++b._
+  +e.lol
+
++b._mod
+  +e.lol
+
++b.foo.SPAN(bar=false)

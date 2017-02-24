@@ -1,68 +1,66 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<title>Framework for Front-End</title>
-	<meta name="description" content="">
-
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!-- Template Basic Images Start -->
-	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-	<!-- Template Basic Images End -->
-
-	<!-- Load Styles Start -->
-	<link rel="stylesheet" href="css/gmdjs.css">
-	<!-- Load Styles End -->
-
-</head>
-<body>
-
-<section>
-
-	<div class="grid">
-
-		<div class="grid__col">
-			Auto
-		</div>
-		<div class="grid__col col-1">
-			Col 1
-		</div>
-		<div class="grid__col col-3 offset">
-			Col 3 Offset 2
-		</div>
-		<div class="grid__col col-2">
-			Col 2
-		</div>
-
-	</div>
-
-	<div class="grid">
-
-		<div class="grid__col">
-			Auto
-		</div>
-		<div class="grid__col col-4">
-			Col 4 Hidden
-		</div>
-		<div class="grid__col col-2 offset-1">
-			Col 2 Offset 1
-		</div>
-		<div class="grid__col col-2">
-			Col 3
-		</div>
-
-	</div>
-
-</section>
-
-<!-- Load Your Scripts Start -->
-<script src="js/common.js"></script>
-<!-- Load Your Scripts End -->
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Grid MD JS</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Template Basic Images Start-->
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/icon-114x114.png">
+    <!-- Load Styles-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/gmdjs.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Mixins-->
+  </head>
+  <body>
+    <!-- The structure of the html document-->
+    <section>
+                  <div class="container">
+                                    <div class="container__auto grid__col"><span>Auto</span>
+                                    </div>
+                                    <div class="container__auto grid__col"><span>Auto</span>
+                                    </div>
+                                    <div class="container__auto grid__col"><span>Auto</span>
+                                    </div>
+                                    <div class="container__auto grid__col"><span>Auto</span>
+                                    </div>
+                  </div>
+                  <div class="container">
+                                    <div class="container__col grid__col"><span>2</span>
+                                    </div>
+                                    <div class="container__col-2 grid__col"><span>7</span>
+                                    </div>
+                                    <div class="container__col-3 grid__col"><span>3</span>
+                                    </div>
+                  </div>
+                  <div class="container">
+                                    <div class="container__col container__offset-left grid__col"><span>2</span>
+                                    </div>
+                                    <div class="container__col container__offset-auto grid__col"><span>2</span>
+                                    </div>
+                                    <div class="container__col container__offset-right grid__col"><span>2</span>
+                                    </div>
+                  </div>
+                  <div class="container-2">
+                                    <div class="container-2__item-xl grid__col"><span>xl</span>
+                                    </div>
+                                    <div class="container-2__item-lg grid__col"><span>lg</span>
+                                    </div>
+                                    <div class="container-2__item-md grid__col"><span>md</span>
+                                    </div>
+                                    <div class="container-2__item-sm grid__col"><span>sm</span>
+                                    </div>
+                                    <div class="container-2__item-xs grid__col"><span>xs</span>
+                                    </div>
+                  </div>
+    </section>
+    <!--script(type='text/javascript' src='js/prism.js')-->
+    <script type="text/javascript" src="js/common.js"></script>
+  </body>
 </html>

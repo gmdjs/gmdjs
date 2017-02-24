@@ -1,0 +1,61 @@
+//- bemto
+//- Copyright(c) 2012 Roman Komarov <kizu@kizu.ru>
+//- MIT Licensed
+
+include tag_metadata
+
+-
+  var default_bemto_settings = {
+    'prefix': '',
+    'element': '__',
+    'modifier': '_',
+    'default_tag': 'div',
+    'nosrc_substitute': true,
+    'flat_elements': true,
+    'class_delimiter': ''
+  }
+
+  var bemto_output_settings = ['element', 'modifier'];
+
+  var bemto_settings = default_bemto_settings;
+
+  var get_bemto_settings = function() {
+    var settings = clone(bemto_settings);
+    if (bemto_settings_prefix      !== undefined) { settings['prefix']      = bemto_settings_prefix;      }
+    if (bemto_settings_element     !== undefined) { settings['element']     = bemto_settings_element;     }
+    if (bemto_settings_modifier    !== undefined) { settings['modifier']    = bemto_settings_modifier;    }
+    if (bemto_settings_default_tag !== undefined) { settings['default_tag'] = bemto_settings_default_tag; }
+
+    for (var i = 0; i < bemto_output_settings.length; i++) {
+      var setting = bemto_output_settings[i];
+      if (settings['output_' + setting] === undefined) {
+        settings['output_' + setting] = settings[setting];
+      }
+    };
+
+    return settings;
+  }
+
+  var set_bemto_setting = function(name, value) {
+    bemto_settings[name] = value;
+
+    //- Resetting the old variable-type setting
+    if (name == 'prefix' && bemto_settings_prefix !== undefined) { bemto_settings_prefix = undefined; }
+    if (name == 'element' && bemto_settings_element !== undefined) { bemto_settings_element = undefined; }
+    if (name == 'modifier' && bemto_settings_modifier !== undefined) { bemto_settings_modifier = undefined; }
+    if (name == 'default_tag' && bemto_settings_default_tag !== undefined) { bemto_settings_default_tag = undefined; }
+  }
+
+  var set_bemto_settings = function(settings) {
+    for (var name in settings) {
+      if (settings.hasOwnProperty(name)) {
+        set_bemto_setting(name, settings[name]);
+      }
+    }
+  }
+
+mixin bemto_scope(settings)
+  - var old_bemto_settings = clone(bemto_settings)
+  - set_bemto_settings(settings)
+  block
+  - set_bemto_settings(old_bemto_settings)

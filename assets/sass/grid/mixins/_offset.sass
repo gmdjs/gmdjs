@@ -1,106 +1,212 @@
-=offset($direction: null, $val: auto)
-	@if ($val == auto)
-		@if ($direction == right)
-			@if ($val)
-				margin-left: auto
+=offset($direction: right, $val: auto)
+  @if $val == auto or $val == 0
+    @if $direction == right
+      margin-left: auto
+    @if $direction == left
+      margin-right: auto
 
-		@if ($direction == left)
-			@if ($val)
-				margin-right: auto
-	@else if ($direction == right)
-		@if ($val)
-			margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
+  @else if $val < $columns + 1
+    @if $direction == right
+      margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
 
-		@if ($direction == left)
-			@if ($val)
-				margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
+    @else if $direction == left
+      margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
 
-=offset-xl($val: 0, $direction: null)
-	+media-xl()
-		@if ($val == auto)
-			@if ($direction == right)
-				@if ($val)
-					margin-left: auto
+=offset-xl($direction: right, $val: auto, $media: up)
+  @if $media == up
+    +media-xl(up)
+      @if $val == auto or $val == 0
+        @if $direction == right
+          margin-left: auto
+        @if $direction == left
+          margin-right: auto
 
-			@if ($direction == left)
-				@if ($val)
-					margin-right: auto
-		@else if ($direction == right)
-			@if ($val)
-				margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
+      @else if $val < $columns + 1
+        @if $direction == right
+          margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
 
-			@if ($direction == left)
-				@if ($val)
-					margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
+        @else if $direction == left
+          margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
 
-=offset-lg($val: 0, $direction: null)
-	+media-lg()
-		@if ($val == auto)
-			@if ($direction == right)
-				@if ($val)
-					margin-left: auto
+  @else if $media == down
+    +media-xl(down)
+      @if $val == auto or $val == 0
+        @if $direction == right
+          margin-left: auto
+        @if $direction == left
+          margin-right: auto
 
-			@if ($direction == left)
-				@if ($val)
-					margin-right: auto
-		@else if ($direction == right)
-			@if ($val)
-				margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
+      @else if $val < $columns + 1
+        @if $direction == right
+          margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
 
-			@if ($direction == left)
-				@if ($val)
-					margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
+        @else if $direction == left
+          margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
 
-=offset-md($val: 0, $direction: null)
-	+media-md()
-		@if ($val == auto)
-			@if ($direction == right)
-				@if ($val)
-					margin-left: auto
+    +media-xs(down)
+      @if $val == auto or $val == 0
+        @if $direction == right
+          margin-left: auto
+        @if $direction == left
+          margin-right: auto
 
-			@if ($direction == left)
-				@if ($val)
-					margin-right: auto
-		@else if ($direction == right)
-			@if ($val)
-				margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
+      @else if $val < $columns + 1
+        @if $direction == right
+          margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
 
-			@if ($direction == left)
-				@if ($val)
-					margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
+        @else if $direction == left
+          margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
 
-=offset-sm($val: 0, $direction: null)
-	+media-sm()
-		@if ($val == auto)
-			@if ($direction == right)
-				@if ($val)
-					margin-left: auto
 
-			@if ($direction == left)
-				@if ($val)
-					margin-right: auto
-		@else if ($direction == right)
-			@if ($val)
-				margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
+=offset-lg($direction: right, $val: auto, $media: up)
+  @if $media == up
+    +media-lg(up)
+      @if $val == auto or $val == 0
+        @if $direction == right
+          margin-left: auto
+        @if $direction == left
+          margin-right: auto
 
-			@if ($direction == left)
-				@if ($val)
-					margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
+      @else if $val < $columns + 1
+        @if $direction == right
+          margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
 
-=offset-xs($val: 0, $direction: null)
-	+media-xs(max)
-		@if ($val == auto)
-			@if ($direction == right)
-				@if ($val)
-					margin-left: auto
+        @else if $direction == left
+          margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
 
-			@if ($direction == left)
-				@if ($val)
-					margin-right: auto
-		@else if ($direction == right)
-			@if ($val)
-				margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
+  @else if $media == down
+    +media-lg(down)
+      @if $val == auto or $val == 0
+        @if $direction == right
+          margin-left: auto
+        @if $direction == left
+          margin-right: auto
 
-			@if ($direction == left)
-				@if ($val)
-					margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2)
+      @else if $val < $columns + 1
+        @if $direction == right
+          margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
+
+        @else if $direction == left
+          margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
+
+    +media-xs(down)
+      @if $val == auto or $val == 0
+        @if $direction == right
+          margin-left: auto
+        @if $direction == left
+          margin-right: auto
+
+      @else if $val < $columns + 1
+        @if $direction == right
+          margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
+
+        @else if $direction == left
+          margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
+
+
+=offset-md($direction: right, $val: auto, $media: up)
+  @if $media == up
+    +media-md(up)
+      @if $val == auto or $val == 0
+        @if $direction == right
+          margin-left: auto
+        @if $direction == left
+          margin-right: auto
+
+      @else if $val < $columns + 1
+        @if $direction == right
+          margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
+
+        @else if $direction == left
+          margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
+
+  @else if $media == down
+    +media-md(down)
+      @if $val == auto or $val == 0
+        @if $direction == right
+          margin-left: auto
+        @if $direction == left
+          margin-right: auto
+
+      @else if $val < $columns + 1
+        @if $direction == right
+          margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
+
+        @else if $direction == left
+          margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
+
+    +media-xs(down)
+      @if $val == auto or $val == 0
+        @if $direction == right
+          margin-left: auto
+        @if $direction == left
+          margin-right: auto
+
+      @else if $val < $columns + 1
+        @if $direction == right
+          margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
+
+        @else if $direction == left
+          margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
+
+
+=offset-sm($direction: right, $val: auto, $media: up)
+  @if $media == up
+    +media-sm(up)
+      @if $val == auto or $val == 0
+        @if $direction == right
+          margin-left: auto
+        @if $direction == left
+          margin-right: auto
+
+      @else if $val < $columns + 1
+        @if $direction == right
+          margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
+
+        @else if $direction == left
+          margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
+
+  @else if $media == down
+    +media-sm(down)
+      @if $val == auto or $val == 0
+        @if $direction == right
+          margin-left: auto
+        @if $direction == left
+          margin-right: auto
+
+      @else if $val < $columns + 1
+        @if $direction == right
+          margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
+
+        @else if $direction == left
+          margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
+
+    +media-xs(down)
+      @if $val == auto or $val == 0
+        @if $direction == right
+          margin-left: auto
+        @if $direction == left
+          margin-right: auto
+
+      @else if $val < $columns + 1
+        @if $direction == right
+          margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
+
+        @else if $direction == left
+          margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
+
+
+=offset-xs($direction: right, $val: auto)
+  +media-xs(down)
+    @if $val == auto or $val == 0
+      @if $direction == right
+        margin-left: auto
+      @if $direction == left
+        margin-right: auto
+
+    @else if $val < $columns + 1
+      @if $direction == right
+        margin-left: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important
+
+      @else if $direction == left
+        margin-right: calc(100% / #{$columns} * #{$val} + #{$margin} / 2) !important

@@ -1,0 +1,34 @@
+include ../../bemto
+
++b.foo(title="Oh, it's a title")
+  +e.A.bar(href='#baz') baz
+
+p
+  +b.image(src="foo.png")
+
+p
+  +b.image(src="foo.png", alt="no title here")
+
+p
+  +b.image(src="foo.png", title="alt is a cloned title")
+
+p
+  +b.input(type="text")
+
+p
+  +b.SCRIPT.script(type="text/javascript")
+
+p
+  +b.DIV.input(type="text")
+
+p
+  +b.input(type="submit")
+
+p
+  +b.BUTTON.input(type="submit")
+
+p
+  +b.input(type="submit") Text!
+
+p
+  +b.SPAN.label(data-ng-if="c.firstParam && !c.secondParam") No escaping please!

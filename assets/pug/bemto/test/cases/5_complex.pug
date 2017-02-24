@@ -1,0 +1,26 @@
+include ../../bemto
+
+mixin link(url)
+  +b.SPAN.link(href=url)&attributes(attributes)
+    block
+
+p
+  +link('#Foo') Foo
+
+p
+  +link('https://github.com')._external Github
+
+p
+  +link('http://kizu.ru').url(rel="me") Here I am
+
+p
+  +link Ah, I'm not a link
+
+p
+  +link('https://github.com')
+    +e.icon(src="http://favicon.yandex.net/favicon/github.com")
+    +e.text Github
+
++b.block
+  +e.elem.foo__
+  +e.elem

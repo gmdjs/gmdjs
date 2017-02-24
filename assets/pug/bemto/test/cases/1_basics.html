@@ -1,0 +1,56 @@
+<div class="foo">bar
+</div>
+<div class="foo">
+  <div class="foo__bar">baz
+  </div>
+</div>
+<div class="foo bar">
+  <div class="bar__baz">
+  </div>
+</div>
+<div class="foo bar">
+  <div class="foo__baz foo__baz_mod bar__baz bar__baz_mod">
+  </div>
+</div>
+<div class="block block_foo">bar
+</div>
+<h1 class="title">header
+</h1><input class="input" required="required" type="text"/>
+<main class="content" role="main">CONTENT
+</main><textarea>Oh hello</textarea><pre>Oh hello</pre>
+<div class="block block_foo block_bar block_baz">
+  <div class="block__element block__element_type_lol block__element_mode_moddy">Blah
+  </div>
+</div>
+<!-- Tag as first uppercase class-->
+<p><span class="foo">bar</span>
+</p>
+<!-- Tag as option-->
+<p><span class="foo">baz</span>
+</p>
+<!-- Backwards compatible way-->
+<p><span class="foo"><span class="foo__bar">raz</span></span>
+</p>
+<!-- Self-closing tag as option-->
+<p>
+  <closey class="foo"/>
+</p>
+<!-- Empty block and empty element-->
+<div>
+  <div>foo
+  </div>
+  <div class="bar bar_mod">foo
+  </div>
+</div>
+<foo>
+  <bar>foo
+  </bar>
+</foo>
+<div class="_">
+  <div class="lol">
+  </div>
+</div>
+<div class="_mod">
+  <div class="lol">
+  </div>
+</div><span class="foo"></span>

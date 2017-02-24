@@ -1,20 +1,48 @@
-=media-xl($direction: min)
-	@media screen and (#{$direction}-width: $xl + $margin * 2)
-		@content
+=media-xl($direction: only)
+  @if ($direction == up or $direction == only)
+    @media screen and (min-width: $xl)
+      @content
+  @else if ($direction == down)
+    @media screen and (max-width: $xl)
+      @content
 
-=media-lg($direction: min)
-	@media screen and (#{$direction}-width: $lg + $margin * 2)
-		@content
+=media-lg($direction: only)
+  @if ($direction == only)
+    @media screen and (min-width: $lg) and (max-width: $xl)
+      @content
+  @else if ($direction == up)
+    @media screen and (min-width: $lg)
+      @content
+  @else if ($direction == down)
+    @media screen and (max-width: $xl)
+      @content
 
-=media-md($direction: min)
-	@media screen and (#{$direction}-width: $md + $margin * 2)
-		@content
+=media-md($direction: only)
+  @if ($direction == only)
+    @media screen and (min-width: $md) and (max-width: $lg)
+      @content
+  @else if ($direction == up)
+    @media screen and (min-width: $md)
+      @content
+  @else if ($direction == down)
+    @media screen and (max-width: $lg)
+      @content
 
-=media-sm($direction: min)
-	@media screen and (#{$direction}-width: $sm + $margin * 2)
-		@content
+=media-sm($direction: only)
+  @if ($direction == only)
+    @media screen and (min-width: $sm) and (max-width: $md)
+      @content
+  @else if ($direction == up)
+    @media screen and (min-width: $sm)
+      @content
+  @else if ($direction == down)
+    @media screen and (max-width: $md)
+      @content
 
-=media-xs($direction: max)
-	@media screen and (#{$direction}-width: $xs + $margin * 2)
-		@content
-
+=media-xs($direction: only)
+  @if ($direction == up)
+    @media screen and (min-width: $xs)
+      @content
+  @else if ($direction == down or $direction == only)
+    @media screen and (max-width: $xs)
+      @content
